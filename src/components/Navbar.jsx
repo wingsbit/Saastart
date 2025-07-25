@@ -1,16 +1,14 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="bg-gray-800 text-white px-10 py-4 flex justify-between items-center shadow-md">
-      <Link to="/" className="text-2xl font-bold tracking-tight">SaaStart 🚀</Link>
-      <div className="space-x-6 text-sm md:text-base">
-        <Link to="/signup" className="hover:underline text-blue-400">Sign Up</Link>
-        <Link to="/login" className="hover:underline text-blue-400">Login</Link>
-      </div>
+    <nav style={{ padding: '1rem', backgroundColor: '#f0f0f0' }}>
+      <Link to="/" style={{ margin: '0 10px' }}>Home</Link>
+      <Link to="/dashboard" style={{ margin: '0 10px' }}>Dashboard</Link>
+      <Link to="/login" style={{ margin: '0 10px' }}>Login</Link>
+      <Link to="/signup" style={{ margin: '0 10px' }}>Signup</Link>
     </nav>
   );
-}
+};
 
 export default Navbar;
